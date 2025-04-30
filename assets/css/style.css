@@ -1,0 +1,313 @@
+body, html{
+    /* background-color: #003e52;
+    background-image: url(../img/bg.png);
+    background-repeat: repeat;
+    background-size: auto;
+    image-rendering: pixelated; */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    vertical-align: middle;
+    margin-top: 60px;
+    background-color: #003e52;
+    background-image: linear-gradient(90deg, transparent 50%, rgba(50, 79, 94, 0.9) 50%);
+    background-size: 50px 50px;
+}
+img{
+    display: block;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.9);
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 1px 10px #030301;
+}
+
+header, footer {
+    background-color: #003e52;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+header.scrolled {
+    background-color: rgba(44, 62, 80, 0.8);
+}
+h1{
+    margin: 0;
+}
+h2{
+    font-size: 48px;
+}
+h3{
+    font-size: 32px;
+    font-family: "Segoe Script";
+    z-index: 999;
+}
+h1, h2{
+    font-family: cursive;
+    text-align: center;
+}
+a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode */
+body.dark-mode, html.dark-mode{
+    /* background: #121212; */
+    color: #f1f1f1;
+    background: #030301;
+    background-image: url(../img/bg-d.png);
+    background-repeat: repeat;
+    background-size: 600px;
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1d1d1d;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bc955c;
+}
+button{
+    font-size: 21px;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    background-color: #003e52;
+    color: #bc955c;
+    border: 5px double #bc955c;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.toggle-btn{
+    color: #bc955c;
+}
+input[type="button"], input[type="submit"] {
+    background-color: #003e52;
+    color: #bc955c;
+    border-radius: 0px;
+    border: .6px double #bc955c;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #012733;
+    color: #bc955c;
+}
+
+button.dark-mode, input[type="button"].dark-mode, input[type="submit"].dark-mode {
+    background-color: #003e52;
+    border: 5px double #bc955c;
+    color: #bc955c;
+}
+
+button.dark-mode:hover, input[type="button"].dark-mode:hover, input[type="submit"].dark-mode:hover {
+    background-color: #bc955c;
+    color: #003e52;
+}
+#toggle-mode{
+    font-size: 16px;
+}
+/* banner */
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(closest-side,rgba(0, 24, 40, 0.6) 0%, rgba(0, 62, 82, 1) 100%, rgba(0, 28, 46, 1) 57%);
+}
+#banner.dark-mode{
+    background: radial-gradient(closest-side,rgba(0, 24, 40, 0.2) 0%, rgba(0, 62, 82, 0.5) 100%, rgba(0, 28, 46, 0.2) 57%);
+}
+.top-img{
+    width: auto;
+    max-height: 70vh;
+}
+
+/* Product display */
+#product-display h3{
+    font-family: "MV Boli", cursive;
+    margin-top: -200px;
+    font-size: 100px;
+    font-weight: 100;
+}
+#product-display p{
+    max-width: 500px;
+    text-align: center;
+    margin-top: -70px;
+    min-height: 100px;
+    font-size: 18px;
+}
+#product-display, #game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#product-display img {
+    max-width: 50%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+body.dark-mode #product-display img {
+    filter: brightness(0.8);
+}
+/* guess number */
+#game{
+    background: #003e52;
+    padding: 1rem; 
+    box-sizing: border-box; 
+    box-shadow: 1px 1px 10px #030301;
+}
+.inner { 
+    border: 2px solid #bc955c; 
+    box-sizing: border-box; 
+    padding: 1rem; 
+    text-align: center; 
+    width: 100%;
+} 
+#game input{
+    max-width: 180px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    height: 30px;
+}
+#game.dark-mode{
+    background: rgba(21, 29, 37, 0.6);
+}
+
+/* Layout */
+header, footer {
+    width: 100%;
+}
+
+section {
+    margin: 40px auto;
+    max-width: 1280px;
+    padding: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error {
+    color: #d39230;
+    font-size: 0.9em;
+    display: flex;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    text-align: left;
+    width: 100%;
+    font-size: 21px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.radio-wrap{
+    display: flex;
+    text-align: left;
+    width: 100%;
+}
+.radio-wrap label{
+    max-width: 130px;
+    margin-top: 0;
+}
+input[type="radio" i] {
+    background-color: #bc955c;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bc955c;
+    border-radius: 0px;
+    background-color: rgba(44, 62, 80, 0.8);
+    color: #fff;
+}
+#submission-message{
+    text-align: center;
+}
+textarea {
+    resize: vertical;
+    height: 100px;
+    color: #fff;
+}
+
+footer{
+    box-shadow: 1px 1px 10px #030301;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}

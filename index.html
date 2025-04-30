@@ -5,18 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/index.js" defer></script>
 </head>
-<body>
+<body class="light-mode">
     <header>
-        
+        <h1>Cocktail Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Cocktails</a></li>
+                <li><a href="#game">Guessing Game</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="toggle-mode">Dark Mode</button></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
+        <section id="banner">
+            <img src="assets/img/top.png" class="top-img" alt="">
+        </section>
+        <section id="products">
+            <h2>Featured Cocktails</h2>
+            <div class="product-buttons">
+                <button data-product="0">Mojito</button>
+                <button data-product="1">Old Fashioned</button>
+                <button data-product="2">Piña Colada</button>
+            </div>
+            <div id="product-display"></div>
+        </section>
 
+        <section id="game">
+            <div class="inner">
+                <h2>Guess the Number (1-10)</h2>
+                <input type="number" id="guess-input" min="1" max="10" placeholder="Enter the number">
+                <button id="guess-button">Submit Guess</button>
+                <p id="game-result"></p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name">
+                <span class="error" id="name-error"></span>
+                
+                <label>Preferred Contact Method</label>
+
+                <div class="radio-wrap">
+                    <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+                    <label><input type="radio" name="contact-method" value="email"> Email</label>
+                    <span class="error" id="method-error"></span>
+                </div>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+                <span class="error" id="phone-error"></span>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="email-error"></span>
+                
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments"></textarea>
+                <span class="error" id="comments-error"></span>
+            
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div id="error-message-container"></div>
+            <div id="submission-message"></div>
+        </section>
     </main>
+
     <footer>
-
+        <p>&copy; 2025 Cocktail Showcase. All rights reserved.</p>
     </footer>
-
-    <script src="assets/js/index.js"></script>
 </body>
 </html>
